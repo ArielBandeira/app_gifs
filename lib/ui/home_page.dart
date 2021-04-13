@@ -18,9 +18,9 @@ class _HomePageState extends State<HomePage> {
     var response;
     
     if(_searchTerm == null) {
-      response = await http.get('https://api.giphy.com/v1/gifs/trending?api_key=y2x7UbYeyCxBX0XFRgceOg6HPB3eGqIf&limit=19&rating=g');
+      response = await http.get('https://api.giphy.com/v1/gifs/trending?api_key=CHAVE&limit=19&rating=g');
     } else {
-      response = await http.get('https://api.giphy.com/v1/gifs/search?q=$_searchTerm&api_key=y2x7UbYeyCxBX0XFRgceOg6HPB3eGqIf&limit=19&rating=g');
+      response = await http.get('https://api.giphy.com/v1/gifs/search?q=$_searchTerm&api_key=CHAVE&limit=19&rating=g');
     }
     
     return json.decode(response.body);
